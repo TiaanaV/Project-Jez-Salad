@@ -10,16 +10,21 @@ body {
   color: #575757;
   background-color: #ffffff;
 }
+:root{
+  --yellow-text-color:#fb9333;
+}
 
 .header {
   margin: 0 auto;
-  height: 163px;
+  max-width: 1170px;
 }
+
 .header-section {
   display: flex;
   align-items: baseline;
-  justify-content: space-around;
+  justify-content: space-between;
 }
+
 .logo {
   font-family: "Roboto";
   font-style: normal;
@@ -28,23 +33,28 @@ body {
   line-height: 28px;
 }
 
+.logo-header{
+  /* margin-right: 247px; */
+}
+
 .yellow {
-  color: #fb9333;
+  color:var(--yellow-text-color);
 }
 
 .navigation-header {
-  width: 421px;
-  height: 41px;
+  /* width: 421px;
+  height: 41px; */
 }
+
 .navigation-menu {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 0;
   padding: 10px;
 }
+
 .navigation-menu__item {
   list-style: none;
 }
@@ -75,11 +85,13 @@ body {
   color: #ffffff;
   background: #fb9333;
   border-radius: 100px;
+  cursor: pointer;
 }
 
 .btn-header {
   padding: 24px 32px;
 }
+
 .btn-link {
   padding: 15px 45px;
   text-decoration: none;
@@ -100,12 +112,11 @@ body {
 .promo-image {
   position: absolute;
   left: 739px;
-  top: -73px;
+  top: 20px;
 }
 
 .promo-image_item {
-  width: 600px;
-  height: 723px;
+
 }
 .btn-rating {
 }
@@ -113,21 +124,16 @@ body {
 }
 
 .btn__promo_info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 213px;
-  height: 53px;
-  margin: 0;
+  display:inline-block;
+  padding:16px;
   color: #fb9333;
   background-color: #fff0dc;
   border-radius: 100px;
-  font-family: "Poppins";
 }
 
 .promo__title {
-  width: 590px;
-  height: 282px;
+  display: block;
+  max-width: 590px;
   font-weight: 700;
   font-size: 72px;
   margin: 30px 0;
@@ -137,18 +143,15 @@ body {
 }
 
 .subtitle {
+  max-width: 496px;
   font-weight: 500;
   font-size: 20px;
-  margin: 0;
   line-height: 160%;
   letter-spacing: -0.02em;
   color: #828282;
 }
 
 .promo__subtitle {
-  width: 496px;
-  height: 64px;
-  margin: 0;
 }
 
 .btn__promo {
@@ -180,20 +183,23 @@ body {
   color: #828282;
 }
 
+.benefits{
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
 .benefits-main {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  margin-bottom:64px;
 }
 
 .benefits-title {
-  width: 586px;
-  height: 134px;
-  margin: 0 132px 64px 135px;
+  margin-right: 132px;
 }
 
 .title {
-  margin: 0;
   font-style: normal;
   font-weight: 600;
   font-size: 48px;
@@ -203,42 +209,42 @@ body {
 }
 
 .benefits-subtitle {
-  width: 450px;
-  height: 108px;
-  align-self: baseline;
+  max-width: 450px;
+  align-self:  center;
   font-weight: 500;
+  word-wrap: break-word;
 }
 
 .benefits-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   padding: 64px 0 100px;
 }
+
 .benefit-item {
   display: grid;
-  grid-template-rows: 160px 43px;
-  width: 370px;
-  height: 483px;
+  grid-template-rows:1fr  min-content min-content max-content;
+  max-width: 370px;
   padding: 40px;
+  margin-right:70px;
   border-radius: 50px;
 }
 
-.benefit-item:nth-child(2) {
-  background: #ffffff;
-  box-shadow: 0px 50px 80px -30px rgba(151, 109, 0, 0.2);
-  border-radius: 50px;
+.benefit-item:nth-child(3){
+  margin-right: 0;
 }
 
 .benefit-item-image {
   padding: 20px;
   background: #ffe8c8;
   border-radius: 20px;
+  margin-bottom: 80px;
 }
 
 .benefit-item-title {
   align-self: center;
-  margin: 0;
+  margin-bottom:12px;
   font-weight: 600;
   font-size: 24px;
   line-height: 180%;
@@ -247,8 +253,9 @@ body {
 }
 
 .benefit-item-subtitle {
-  margin: 0;
+  margin-bottom: 24px;
   align-self: center;
+  word-wrap: break-word;
   font-weight: 400;
   font-size: 16px;
   line-height: 180%;
@@ -259,7 +266,7 @@ body {
 .benefit-btn {
   display: flex;
   align-items: center;
-  align-self: flex-end;
+  align-self: center;
   width: 122px;
   height: 29px;
   padding: 10px 24px;
@@ -271,14 +278,21 @@ body {
   border-radius: 50px;
 }
 
-.benefit-btn__middle {
-  color: #ffffff;
+.benefit-item:hover{
+  background: #ffffff;
+  box-shadow: 0px 50px 80px -30px rgba(151, 109, 0, 0.2);
+  border-radius: 50px;
 }
 
-.benefit-btn:hover {
+.benefit-item:hover .benefit-btn{
+  color: #ffffff;
+  background-color: var(--yellow-text-color);
+}
+
+.benefit-item:hover .benefit-btn:active{
   color: #fb9333;
   background-color: #f2d4a9;
-}
+} 
 
 .benefit-btn-icon {
   width: 24px;
@@ -286,9 +300,13 @@ body {
   padding-left: 10px;
 }
 
+.benefit-item:hover .benefit-btn-icon{
+  background: url(assets/arrow-right-white.png) no-repeat
+}
+
 .reviews {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   margin: 0 auto;
   padding: 113px 0 121px;
   background: linear-gradient(
@@ -544,9 +562,13 @@ body {
 
 .footer {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin-bottom: 100px;
 }
+.footer-item{
+  margin-right: 180px;
+}
+
 .footer-logo-copyright {
   display: flex;
   flex-direction: column;
