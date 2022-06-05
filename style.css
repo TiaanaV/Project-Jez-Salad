@@ -14,6 +14,11 @@ body {
   --yellow-text-color:#fb9333;
 }
 
+.gradient-decor{
+  background-image: linear-gradient( to right top,#fff 55%,#FFE8C8,#fff);
+
+}
+
 .header {
   margin: 0 auto;
   max-width: 1170px;
@@ -23,6 +28,8 @@ body {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+  margin-bottom:135px;
+  padding-top: 22px;
 }
 
 .logo {
@@ -34,7 +41,6 @@ body {
 }
 
 .logo-header{
-  /* margin-right: 247px; */
 }
 
 .yellow {
@@ -42,8 +48,6 @@ body {
 }
 
 .navigation-header {
-  /* width: 421px;
-  height: 41px; */
 }
 
 .navigation-menu {
@@ -57,7 +61,13 @@ body {
 
 .navigation-menu__item {
   list-style: none;
+  margin-right: 46px;
 }
+
+.navigation-menu__item:last-child{
+  margin-right: 0;
+}
+
 .navigation-menu__link {
   font-family: "Poppins";
   font-style: normal;
@@ -78,7 +88,7 @@ body {
   color: #fb9333;
   font-weight: 700;
   border-radius: 50px 50px;
-  background-color: #f2d4a9;
+  background-color: #ffffff;
 }
 
 .btn {
@@ -105,14 +115,41 @@ body {
 .promo {
   margin: 0 auto;
   max-width: 1170px;
-  padding-bottom: 120px;
+  padding-bottom: 140px;
   position: relative;
 }
 
 .promo-image {
   position: absolute;
-  left: 739px;
-  top: 20px;
+  right: -30px;
+  top: -55px;
+  z-index: 0;
+}
+
+.promo-image::before{
+  content: "";
+  position: absolute;
+  top: 170px;
+  right: 50px;
+  width: 482px;
+  height: 482px;
+  background-color: #FFC97D;
+  border-radius: 80px;
+  transform: rotate(-120deg);
+  z-index: -1;
+}
+
+.promo-image::after{
+  content: "";
+  position: absolute;
+  top: 180px;
+  right: 60px;
+  width: 482px;
+  height: 482px;
+  background-color: #FFE8C8;
+  border-radius: 80px;
+  transform: rotate(-105deg);
+  z-index: -2;
 }
 
 .promo-image_item {
@@ -165,22 +202,20 @@ body {
 
 .indicators {
   margin-top: 40px;
-  height: 61px;
-  width: 370px;
   line-height: 160%;
 }
 
 .indicator-number {
-  margin: 0;
   width: max-content;
   font-size: 24px;
+  padding-right: 30px;
 }
 
 .indicator-item {
-  margin: 0;
   width: max-content;
   font-weight: 500;
   color: #828282;
+  padding-right: 30px;
 }
 
 .benefits{
@@ -224,8 +259,9 @@ body {
 
 .benefit-item {
   display: grid;
-  grid-template-rows:1fr  min-content min-content max-content;
-  max-width: 370px;
+  grid-template-rows:1fr  min-content 1fr max-content;
+  min-width: 290px;
+  max-height: 483px;
   padding: 40px;
   margin-right:70px;
   border-radius: 50px;
@@ -236,14 +272,17 @@ body {
 }
 
 .benefit-item-image {
-  padding: 20px;
+  padding: 27px;
   background: #ffe8c8;
   border-radius: 20px;
   margin-bottom: 80px;
 }
 
+.benefit-item-image[alt = factory]{
+  padding: 18px 21px 24px;
+}
+
 .benefit-item-title {
-  align-self: center;
   margin-bottom:12px;
   font-weight: 600;
   font-size: 24px;
@@ -267,8 +306,7 @@ body {
   display: flex;
   align-items: center;
   align-self: center;
-  width: 122px;
-  height: 29px;
+  max-width: 122px;
   padding: 10px 24px;
   color: #575757;
   text-decoration: none;
@@ -276,6 +314,9 @@ body {
   line-height: 180%;
   letter-spacing: -0.02em;
   border-radius: 50px;
+  background:no-repeat 85%  url("assets/arrow-right.png");
+  background-size: 24px;
+
 }
 
 .benefit-item:hover{
@@ -287,6 +328,7 @@ body {
 .benefit-item:hover .benefit-btn{
   color: #ffffff;
   background-color: var(--yellow-text-color);
+  background-image: url("assets/arrow-right-white.png");
 }
 
 .benefit-item:hover .benefit-btn:active{
@@ -295,13 +337,7 @@ body {
 } 
 
 .benefit-btn-icon {
-  width: 24px;
-  height: 24px;
   padding-left: 10px;
-}
-
-.benefit-item:hover .benefit-btn-icon{
-  background: url(assets/arrow-right-white.png) no-repeat
 }
 
 .reviews {
@@ -320,25 +356,25 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  margin-left: 135px;
+  justify-content: center;
 }
 
 .reviews-title {
-  width: 416.08px;
-  height: 128px;
+  max-width: 402px;
+  margin-bottom:30px;
   color: #333333;
   word-wrap: break-word;
 }
 
 .reviews-subtitle {
-  width: 401.05px;
-  height: 72px;
+  max-width:402px;
+  margin-bottom: 32px;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   color: #999999;
 }
+
 .paginator {
   align-self: flex-start;
   justify-self: flex-end;
@@ -347,7 +383,7 @@ body {
 .paginator-indicators {
   font-family: "Raleway";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 700;margin-bottom: 24px;
 }
 
 .current {
@@ -355,6 +391,7 @@ body {
   line-height: 64px;
   color: #333333;
 }
+
 .total {
   vertical-align: text-bottom;
   line-height: 22px;
@@ -398,8 +435,7 @@ body {
 }
 .review-item {
   display: grid;
-  width: 269px;
-  height: 402px;
+  max-width: 206px;
   padding: 24px 32px;
   margin: 0 15px;
   background: white;
@@ -415,16 +451,18 @@ body {
   line-height: 32px;
   font-feature-settings: "pnum" on, "lnum" on;
   color: #2b2b2b;
+  margin-bottom: 8px;
 }
+
 .review-author-age {
-  margin: 0;
+  margin-bottom:19px;
   font-weight: 500;
   font-size: 14px;
   line-height: 150%;
   color: #999999;
 }
+
 .review-blockquote {
-  margin: 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
@@ -506,12 +544,14 @@ body {
   border-radius: 50px;
   margin-bottom: 162px;
 }
+
 .subscribe-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   align-content: center;
 }
+
 .subscribe-title {
   max-width: 665px;
   text-align: center;
@@ -532,6 +572,13 @@ body {
   align-items: center;
   position: relative;
 }
+
+input[type=email]{
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: -0.02em;
+}
+
 .subscribe-input {
   width: 661px;
   height: 60px;
