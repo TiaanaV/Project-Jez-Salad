@@ -1,0 +1,30 @@
+@media(max-width:1350px){
+    .logo, 
+    .btn__promo_info{
+         margin-left: 40px;
+    }
+    .btn-header{
+        margin-right: 40px;
+    }
+
+    .benefits-main{
+        justify-content: center;
+        text-align: center;
+    }
+
+ }
+
+@media(max-width:1024px){
+   .promo{
+        flex-direction: column;
+   }
+   .benefits-list{
+        flex-direction: column;
+   }
+
+   .navigation-menu{
+       display:none;
+   }
+
+  
+}

@@ -1,6 +1,5 @@
 body {
-  margin: 0;
-  padding: 0;
+
   font-family: "Poppins", "Roboto", sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -9,26 +8,33 @@ body {
   line-height: 130%;
   color: #575757;
   background-color: #ffffff;
+  min-width: 1000px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
+
 :root{
   --yellow-text-color:#fb9333;
 }
 
+
 .gradient-decor{
   background-image: linear-gradient( to right top,#fff 55%,#FFE8C8,#fff);
-
+  
 }
 
 .header {
   margin: 0 auto;
-  max-width: 1170px;
+  max-width: 1200px;
 }
 
 .header-section {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  margin-bottom:135px;
+  margin-bottom:64px;
   padding-top: 22px;
 }
 
@@ -40,14 +46,8 @@ body {
   line-height: 28px;
 }
 
-.logo-header{
-}
-
 .yellow {
   color:var(--yellow-text-color);
-}
-
-.navigation-header {
 }
 
 .navigation-menu {
@@ -116,52 +116,12 @@ body {
   margin: 0 auto;
   max-width: 1170px;
   padding-bottom: 140px;
-  position: relative;
-}
-
-.promo-image {
-  position: absolute;
-  right: -30px;
-  top: -55px;
-  z-index: 0;
-}
-
-.promo-image::before{
-  content: "";
-  position: absolute;
-  top: 170px;
-  right: 50px;
-  width: 482px;
-  height: 482px;
-  background-color: #FFC97D;
-  border-radius: 80px;
-  transform: rotate(-120deg);
-  z-index: -1;
-}
-
-.promo-image::after{
-  content: "";
-  position: absolute;
-  top: 180px;
-  right: 60px;
-  width: 482px;
-  height: 482px;
-  background-color: #FFE8C8;
-  border-radius: 80px;
-  transform: rotate(-105deg);
-  z-index: -2;
-}
-
-.promo-image_item {
-
-}
-.btn-rating {
-}
-.btn-calories {
+  display: flex;
 }
 
 .btn__promo_info {
   display:inline-block;
+  margin-top: 40px;
   padding:16px;
   color: #fb9333;
   background-color: #fff0dc;
@@ -186,9 +146,6 @@ body {
   line-height: 160%;
   letter-spacing: -0.02em;
   color: #828282;
-}
-
-.promo__subtitle {
 }
 
 .btn__promo {
@@ -218,6 +175,37 @@ body {
   padding-right: 30px;
 }
 
+.promo-image{
+  z-index: 0;
+  position: relative;
+}
+
+.promo-image::before{
+  content: "";
+  position: absolute;
+  top: 170px;
+  right: 50px;
+  width: 482px;
+  height: 482px;
+  background-color: #FFC97D;
+  border-radius: 80px;
+  transform: rotate(-120deg);
+  z-index: -1;
+}
+
+.promo-image::after{
+  content: "";
+  position: absolute;
+  top: 180px;
+  right: 60px;
+  width: 482px;
+  height: 482px;
+  background-color: #FFE8C8;
+  border-radius: 80px;
+  transform: rotate(-105deg);
+  z-index: -2;
+}
+
 .benefits{
   margin: 0 auto;
   max-width: 1170px;
@@ -225,13 +213,15 @@ body {
 
 .benefits-main {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   align-items: center;
+  row-gap: 20px;
+  column-gap: 132px;
   margin-bottom:64px;
 }
 
 .benefits-title {
-  margin-right: 132px;
 }
 
 .title {
@@ -245,7 +235,6 @@ body {
 
 .benefits-subtitle {
   max-width: 450px;
-  align-self:  center;
   font-weight: 500;
   word-wrap: break-word;
 }
@@ -342,6 +331,7 @@ body {
 
 .reviews {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
   padding: 113px 0 121px;
@@ -383,7 +373,8 @@ body {
 .paginator-indicators {
   font-family: "Raleway";
   font-style: normal;
-  font-weight: 700;margin-bottom: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
 }
 
 .current {
@@ -432,7 +423,9 @@ body {
 .reviews-list {
   display: inline-flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
+
 .review-item {
   display: grid;
   max-width: 206px;
@@ -471,6 +464,8 @@ body {
   overflow: hidden;
 }
 
+/*  Menu section / */
+
 .menu {
   margin: 120px 0 70px;
 }
@@ -502,10 +497,11 @@ body {
   display: flex;
   justify-content: center;
   align-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
   margin-bottom: 150px;
 }
 .menu-popular-item {
-  margin-right: 30px;
   position: relative;
 }
 
@@ -539,6 +535,8 @@ body {
 }
 
 .subscribe {
+  margin: 0 auto;
+  max-width: 1170px;
   padding: 48px 0 96px;
   background: #fff8ed;
   border-radius: 50px;
@@ -608,12 +606,18 @@ input[type=email]{
 }
 
 .footer {
+  max-width: 1117px;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
   margin-bottom: 100px;
 }
+
 .footer-item{
-  margin-right: 180px;
+  margin-right: 140px;
+}
+
+.footer-item:last-child{
+  margin-right: 0;
 }
 
 .footer-logo-copyright {
