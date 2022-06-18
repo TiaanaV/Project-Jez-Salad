@@ -1,30 +1,213 @@
-@media(max-width:1350px){
-    .logo, 
-    .btn__promo_info{
-         margin-left: 40px;
-    }
-    .btn-header{
-        margin-right: 40px;
-    }
+@media (max-width: 1350px) {
+  .logo-header {
+    margin-left: 40px;
+  }
 
-    .benefits-main{
-        justify-content: center;
-        text-align: center;
-    }
+  .footer {
+    margin: 0 50px;
+  }
+}
 
- }
+@media (max-width: 1260px) {
+  .reviews {
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 155px;
+  }
 
-@media(max-width:1024px){
-   .promo{
-        flex-direction: column;
-   }
-   .benefits-list{
-        flex-direction: column;
-   }
+  .reviews-content {
+    margin-bottom: 50px;
+  }
 
-   .navigation-menu{
-       display:none;
-   }
+  .review-item:not(:first-of-type) {
+    display: none;
+  }
 
-  
+  .review-item {
+    position: relative;
+  }
+
+  .review-photo {
+    position: absolute;
+    top: -60px;
+    left: 24px;
+  }
+
+  .review-author {
+    margin-top: 25px;
+  }
+
+  .paginator {
+    position: absolute;
+    top: 755px;
+    align-self: center;
+  }
+
+  .paginator-indicators {
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-style: 15px;
+  }
+
+  .paginator-btn {
+    width: 44px;
+    height: 44px;
+    background-position: 14px 14px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .promo {
+    flex-direction: column;
+    max-width: fit-content;
+  }
+
+  .promo-content {
+    margin-bottom: 25px;
+  }
+
+  .benefits-main {
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .benefits-title,
+  .benefits-subtitle {
+    margin-bottom: 25px;
+  }
+
+  .benefits-list {
+    flex-direction: column;
+  }
+
+  .benefit-item {
+    align-items: center;
+    align-content: center;
+    max-width: 350px;
+    margin-right: 0;
+  }
+
+  .menu-popular {
+    flex-direction: column;
+  }
+
+  .menu-popular-item {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .dish-image {
+    width: 320px;
+    height: 470px;
+  }
+
+  .dish-name {
+    top: 374px;
+    left: 40px;
+  }
+
+  .dish-price {
+    top: 405px;
+    left: 40px;
+    font-size: 35px;
+  }
+
+  .subscribe-input {
+    width: 500px;
+    height: 42px;
+  }
+
+  .subscribe-btn {
+    padding: 12.5px 25px;
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  .footer {
+    margin-bottom: 90px;
+  }
+
+  .footer-item:not(:last-of-type) {
+    margin-right: 80px;
+  }
+
+  .footer-subtitle {
+    margin: 10px 0 37px;
+  }
+
+  .list-head {
+    margin-bottom: 10px;
+  }
+
+  .feature-item {
+    margin-bottom: 10px;
+  }
+
+  .social-button {
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navigation-menu {
+    display: none;
+  }
+
+  .navigation-menu-button {
+    display: block;
+  }
+
+  .navigation-header.open .navigation-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0%;
+    right: 0;
+    bottom: 0%;
+    background-color: var(--background-white);
+    z-index: 1;
+    padding: 46px 40px;
+  }
+
+  .navigation-menu-button {
+    position: fixed;
+    z-index: 9;
+  }
+
+  .navigation-menu__item {
+    margin-bottom: 40px;
+    font-size: 30px;
+  }
+
+  .navigation-menu__item:hover {
+    color: var(--main-yellow-text-color);
+    text-decoration: underline;
+    font-weight: 600;
+  }
+
+  .navigation-menu__item:active {
+    color: var(--background-white);
+    border-radius: 30px 20px;
+    background-color: var(--hover-color);
+  }
+
+  .btn-header {
+    margin-right: 650px;
+  }
+
+  .header .btn-link {
+    padding: 10px 35px;
+  }
+
+  .promo__title {
+    font-size: 56px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
 }

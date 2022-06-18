@@ -10,16 +10,19 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="variables.css" />
     <link rel="stylesheet" href="style.css" />
-    <link  rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="media.css" />
   </head>
 
   <body>
     <div class="gradient-decor">
       <header class="header">
         <div class="header-section">
-          <h3 class="logo logo-header"><span class="yellow">JEZ</span> SALAD</h3>
-          <nav class="navigation-header">
+          <h3 class="logo logo-header">
+            <span class="main-color">JEZ</span> SALAD
+          </h3>
+          <nav id="nav" class="navigation-header">
             <ul class="navigation-menu">
               <li class="navigation-menu__item">
                 <a class="navigation-menu__link" href="#">Home</a>
@@ -34,27 +37,32 @@
                 <a class="navigation-menu__link" href="#">About us</a>
               </li>
             </ul>
+            <button id="nav-button" class="navigation-menu-button">
+              <img
+                id="nav-button-img"
+                src="/assets/menu-open.svg"
+                alt="menu-open"
+                width="45px"
+              />
+            </button>
           </nav>
-          <button class="nav-btn">
-            <img src="/assets/menu-open1.png" alt="menu-open">
-          </button>
-      
+
           <div class="btn-header">
             <a class="btn btn-link" href="#" target="_blank">Sing</a>
           </div>
         </div>
       </header>
 
-      <section class="promo">
+      <section class="promo container">
         <div class="promo-content">
-          <p class=" btn__promo_info">#1 Best Healthy Salad</p>
+          <p class="btn__promo_info">#1 Best Healthy Salad</p>
           <h1 class="promo__title">
-            <span class="yellow">Skip</span> The Diet, Just Eat Healthy With Jez
-            Salad
+            <span class="main-color">Skip</span> The Diet,<br />
+            Just Eat Healthy <br />With Jez Salad
           </h1>
           <p class="subtitle promo__subtitle">
-            Imagine you don't need a diet because we provide healthy and delicious
-            food for you!
+            Imagine you don't need a diet because we provide healthy and
+            delicious food for you!
           </p>
           <div class="btn__promo">
             <a class="btn btn-link" href="#">Order Food</a>
@@ -71,23 +79,23 @@
               <td class="indicator-item">Ratings</td>
             </tr>
           </table>
-      </div>
-      <div class="promo-image">
-        <img
-          class="promo-image_item"
-          src="assets/beautiful-young-woman-eating-salad-black-background-removebg.png"
-          alt="beautiful woman eat salad"
-        />
-      </div>
+        </div>
+        <div class="promo-image">
+          <img
+            class="promo-image_item"
+            src="assets/beautiful-young-woman-eating-salad-black-background-removebg.png"
+            alt="beautiful woman eat salad"
+          />
+        </div>
       </section>
     </div>
 
-    <section class="benefits">
+    <section class="benefits container">
       <div class="benefits-main">
         <div class="benefits-title">
           <h2 class="title">
             WHY CHOOSE US <br />
-            FOR <span class="yellow">YOUR HEALTHY FOOD</span>
+            FOR <span class="main-color">YOUR HEALTHY FOOD</span>
           </h2>
         </div>
         <div class="benefits-subtitle">
@@ -110,8 +118,7 @@
             Langsung dari Kebun Sendiri yang tersebar di setiap province yang
             memiliki cabang toko Jez Salad.
           </p>
-          <a class="benefit-btn" href="#"
-            >Learn more</a>
+          <a class="benefit-btn" href="#">Learn more</a>
         </div>
 
         <div class="benefit-item">
@@ -125,8 +132,7 @@
             The pioneer of healthy fruit salads that are delicious & suitable
             for all people with the best quality assurance.
           </p>
-          <a class="benefit-btn" href="#"
-            >Learn more</a>
+          <a class="benefit-btn" href="#">Learn more</a>
         </div>
 
         <div class="benefit-item">
@@ -140,8 +146,7 @@
             We are one of the best brands in the Food and Beverage sector in
             Indonesia.
           </p>
-          <a class=" benefit-btn" href="#"
-            >Learn more</a>
+          <a class="benefit-btn" href="#">Learn more</a>
         </div>
       </div>
     </section>
@@ -149,7 +154,7 @@
     <section class="reviews">
       <div class="reviews-content">
         <h2 class="title reviews-title">
-          What Are People Saying <span class="yellow">About Us</span>
+          What Are People Saying <span class="main-color">About Us</span>
         </h2>
         <p class="subtitle reviews-subtitle">
           We are very happy if you are satisfied with our service and products,
@@ -160,9 +165,12 @@
             <span class="current">01</span>
             <span class="total">/05</span>
           </div>
-          <div class="paginator-btn">
-            <a class="paginator-btn__prev disabled" href="#prev"></a>
-            <a class="paginator-btn__next" href="#next"></a>
+          <div class="paginator-block">
+            <a
+              class="paginator-btn paginator-btn__prev disabled"
+              href="#prev"
+            ></a>
+            <a class="paginator-btn paginator-btn__next" href="#next"></a>
           </div>
         </div>
       </div>
@@ -202,12 +210,12 @@
         </div>
       </div>
     </section>
-    <section class="menu">
+    <section class="menu container">
       <div class="menu-main">
         <span class="uptitle">MENU YANG MEMBUATMU JATUH CINTA</span>
         <div class="title menu-title">
           ENJOY THE BEST MENU AND GET
-          <span class="yellow">DISCOUNTS</span> AVAILABLE
+          <span class="main-color">DISCOUNTS</span> AVAILABLE
         </div>
       </div>
 
@@ -246,7 +254,7 @@
         </div>
       </div>
     </section>
-    <section class="subscribe">
+    <section class="subscribe container">
       <div class="subscribe-box">
         <p class="uptitle">Our Subscribe</p>
         <h2 class="title subscribe-title">
@@ -268,9 +276,11 @@
         </div>
       </div>
     </section>
-    <footer class="footer">
+    <footer class="footer container">
       <div class="footer-item footer-logo-copyright">
-        <h3 class="footer-logo logo"><span class="yellow">JEZ</span> SALAD</h3>
+        <h3 class="footer-logo logo">
+          <span class="main-color">JEZ</span> SALAD
+        </h3>
         <p class="footer-subtitle">
           Jez Salad is the pioneer of healthy fruit salad with high nutrition.
         </p>
@@ -326,5 +336,6 @@
         <p class="subtitle-social">Follow our social media.</p>
       </div>
     </footer>
+    <script src="./main.js"></script>
   </body>
 </html>

@@ -1,0 +1,18 @@
+:root {
+  --main-yellow-text-color: #fb9333;
+  --gray-text-color: #575757;
+  --light-grey-text-color: #828282;
+  --dark-grey-text-color: #2b2b2b;
+  --background-white: #fff;
+  --background-info-btn-color: #fff0dc;
+  --hover-color: #f2d4a9;
+  --before-element-color: #ffc97d;
+  --after-element-color: #ffe8c8;
+  --background-benefit-images: #ffe8c8;
+  --dark-black-color: #333333;
+  --light-black-color: #2b2b2b;
+  --background-subscribe-color: #fff8ed;
+  --silver-color: #cccccc;
+  --gold-color: #ffd7a0;
+  --dusty-gray-color: #999999;
+}
