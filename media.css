@@ -211,3 +211,52 @@
     font-size: 40px;
   }
 }
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 425px) {
+  body {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 130%;
+    min-width: 500px;
+  }
+
+  .promo-image {
+    display: none;
+  }
+
+  .subscribe {
+    padding: 40px 0 90px;
+  }
+  .subscribe-title {
+    max-width: 400px;
+    margin-bottom: 15px;
+  }
+
+  .subscribe-subtitle {
+    max-width: 400px;
+    font-size: 16px;
+    line-height: 25.6px;
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  .subscribe-btn {
+    top: 8px;
+    right: 8px;
+    padding: 19.5px 41px;
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+  }
+  .footer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 375px) {
+}
+@media (max-width: 320px) {
+}
