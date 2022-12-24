@@ -223,6 +223,18 @@
     min-width: 500px;
   }
 
+  .header {
+    max-width: 520px;
+  }
+
+  .logo {
+    display: flex;
+    font-family: "Roboto";
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 15px;
+  }
+
   .promo-image {
     display: none;
   }
